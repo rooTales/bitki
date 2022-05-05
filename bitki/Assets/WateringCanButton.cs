@@ -14,15 +14,13 @@ public class WateringCanButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log(eventData);
-        
-        Ray ray = cam.ScreenPointToRay(Helpers.ScreenToWorldPosition(eventData.position, cam, eventData.position.y));
+        Ray ray = cam.ScreenPointToRay(eventData.position);
 
         if(Physics.Raycast(ray, out var hitInfo))
         {
             if(hitInfo.collider.gameObject == wateringCan)
             {
-                Debug.Log("dog");
+                //water level gösterilsin, game açılması sorulsun
             }
         }
     }

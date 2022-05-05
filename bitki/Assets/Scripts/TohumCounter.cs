@@ -10,7 +10,7 @@ public class TohumCounter : MonoBehaviour
     
     void Start()
     {
-        text.text = "tüxt";
+        text.text = "text";
     }
 
     // Update is called once per frame
